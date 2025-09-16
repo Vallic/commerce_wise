@@ -54,11 +54,11 @@ class QuickPay extends OffsitePaymentGatewayBase implements QuickPayInterface {
    */
   public function defaultConfiguration() {
     return [
-        'wise_tag' => '',
-        'public_key' => '',
-        'account_type' => 'business',
-        'logging' => FALSE,
-      ] + parent::defaultConfiguration();
+      'wise_tag' => '',
+      'public_key' => '',
+      'account_type' => 'business',
+      'logging' => FALSE,
+    ] + parent::defaultConfiguration();
   }
 
   /**
@@ -140,14 +140,14 @@ class QuickPay extends OffsitePaymentGatewayBase implements QuickPayInterface {
    */
   protected function verifyWebhookSignature(string $payload, string $signature): bool {
     // Decode base64 signature
-    $signature = base64_decode($signature, true);
-    if ($signature === false) {
+    $signature = base64_decode($signature, TRUE);
+    if (!$signature) {
       return FALSE;
     }
 
     // Load public key
     $publicKey = openssl_pkey_get_public($this->getPublicKey());
-    if ($publicKey === false) {
+    if (!$publicKey) {
       return FALSE;
     }
 

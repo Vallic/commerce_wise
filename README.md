@@ -26,10 +26,9 @@ This module should be added to your codebase via Composer
 
 `composer require "drupal/commerce_wise:^1.0"`
 
-You must also have a Wise business account to configure for your integration.
-
 There are no other requirements than [Commerce Core 3](https://www.drupal.org/project/commerce)
 
+You must also have a Wise business account to configure for your integration.
 You can sign up for one [here](https://wise.com/invite/dic/valentinom6).
 
 
