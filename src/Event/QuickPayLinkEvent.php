@@ -46,7 +46,6 @@ class QuickPayLinkEvent extends Event {
     return $this->balance;
   }
 
-
   /**
    * Get the order.
    */

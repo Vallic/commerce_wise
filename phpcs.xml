@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="commerce">
-  <description>Default PHP CodeSniffer configuration for Commerce Revolut.</description>
+  <description>Default PHP CodeSniffer configuration for Commerce Wise.</description>
   <file>.</file>
   <arg name="extensions" value="php,module,inc,install,test,profile,theme"/>
   <config name="drupal_core_version" value="8"/>
